@@ -102,9 +102,9 @@ button.close{
 
 @media only screen and (max-width: 600px) {
 .caption h1{
-  font-size:60px;
+  font-size:50px;
 }
 .caption p{
-  font-size:35px;
+  font-size:30px;
 }
 }
