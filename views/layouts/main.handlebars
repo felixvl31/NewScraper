@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>NewScrapper</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Assistant" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="CSS/reset.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="http://localhost:3000/">NewScrapper</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link btn btn-dark home" href="http://localhost:3000/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-dark saved-news" href="/saved">Saved Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-dark scrape-new">Scrape News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-dark clear">Clear News</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron text-center container">
+  <div class="overlay">
+  </div>
+  <div class="background-image">
+
+  </div>
+  <div class="caption">
+    <h1>NewScrapper</h1>
+    <p>New York Times Edition</p>
+  </div>
+</div>
+<div class="container news-container"> 
+</div>
+
+  {{{body}}}
+
+
+<footer class="footer">
+  <div class="container text-center align-middle">
+    <p>New York Times Mongo Scraper</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="Javascript/app.js"></script>
+
+
+</body></html>

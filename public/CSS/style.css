@@ -1,0 +1,110 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 45px;
+  background: linear-gradient(#333, black);
+  font-family: 'Assistant', sans-serif;
+  font-weight: bold;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+.jumbotron {
+  height: 100%;
+  background-image: url("../Images/newspaper.jpg");
+  opacity:.9;
+  background-size: cover;
+  font-family: 'Abril Fatface', cursive;
+}
+
+/* NavBar */
+.navbar-brand{
+  font-size:40px;
+  font-family: 'Abril Fatface', cursive;
+}
+.home,.saved-news,.scrape-new,.clear{
+  font-weight: 600;
+  color:white !important;
+}
+nav{
+  border-bottom:5px solid white;
+  margin-bottom:10px;
+}
+
+/* Caption */
+.caption{
+   color:black;
+  -webkit-text-fill-color: white;
+    -webkit-text-stroke-width:2px;
+  -webkit-text-stroke-color:black;
+  opacity:1;
+}
+.caption h1{
+  font-size:70px;
+}
+.caption p{
+  font-size:30px;
+  -webkit-text-stroke-width:0.5px;
+}
+
+/* Cards */
+
+.card{
+  margin-bottom: 10px;
+  border:none;
+}
+
+.card-header{
+  background: linear-gradient(to bottom, #dbdbdb 0%,#b7b7b7 56%,#cecece 100%);
+}
+.article-link{
+  color:black;
+  font-weight:bolder;
+}
+.article-link:hover,.article-link:active{
+  color:white;
+}
+
+.save,.notes,.unsave,#savenote,.closemodal{
+  color:white !important; 
+  font-weight:bolder; 
+  margin-bottom: 5px;
+}
+
+/* Notes */
+.modal-content{
+  background: linear-gradient(#333, white);
+}
+.modal-title{
+  color:white !important;
+  font-weight:bolder; 
+}
+textarea{
+  width:98%;
+  resize: none;
+  border-radius:5px;
+}
+button.close{
+  color:White;
+}
+.note{
+  width:98%;
+}
+
+@media only screen and (max-width: 600px) {
+.caption h1{
+  font-size:60px;
+}
+.caption p{
+  font-size:35px;
+}
+}
