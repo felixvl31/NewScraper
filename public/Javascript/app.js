@@ -77,7 +77,7 @@ $(document).ready(function() {
           <div class= "col-9 col-md-10 text-center">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
           </div>
-          <div class= "col-3 col-md-2 text-center">
+          <div class= "buttonsSaved col-3 col-md-2 text-center">
             <a class='btn btn-danger unsave'>Remove</a>
             <button type='button' class="btn btn-primary notes" data-toggle='modal' class='notes' data-target='.modal' data-id='${news._id}'>Notes</button>
           </div>

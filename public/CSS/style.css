@@ -65,6 +65,10 @@ nav{
 
 .card-header{
   background: linear-gradient(to bottom, #dbdbdb 0%,#b7b7b7 56%,#cecece 100%);
+  padding:10px;
+}
+.card-body{
+  padding-top:3px !important;
 }
 .article-link{
   color:black;
@@ -80,6 +84,9 @@ nav{
   margin-bottom: 5px;
 }
 
+.buttonsSaved{
+  padding:5px !important;
+}
 /* Notes */
 .modal-content{
   background: linear-gradient(#333, white);
