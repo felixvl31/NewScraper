@@ -103,8 +103,7 @@ $(document).ready(function() {
             <h3>What Would You Like To Do?</h3>
           </div>
           <div class='card-body text-center'>
-            <h4><a class='scrape-new  empty'>Try Scraping New Articles</a></h4>
-            <h4><a class="GoToSaved" href='/saved'>Go to Saved Articles</a></h4>
+            <h4><a class='scrape-new  empty'>Try scraping new articles</a></h4>
           </div>
         </div>`;
     newsContainer.append(emptyAlert);
@@ -119,7 +118,7 @@ $(document).ready(function() {
             <h3>What Would You Like To Do?</h3>
           </div>
           <div class='card-body text-center'>
-            <h4><a class='scrape-new empty'>Try Scraping New Articles</a></h4>
+            <h4><a class="GoToSaved" href='/'>Go back and save some articles</a></h4>
           </div>
         </div>`;
     newsContainer.append(emptyAlert);
