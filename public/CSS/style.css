@@ -87,6 +87,15 @@ nav{
 .buttonsSaved{
   padding:5px !important;
 }
+.empty,.GoToSaved{
+  color:black !important;
+  text-decoration: underline !important;
+  font-weight:600;
+}
+.empty:hover,.empty:active,.GoToSaved:hover,.GoToSaved:active{
+  cursor:pointer;
+  color:gray !important;
+}
 /* Notes */
 .modal-content{
   background: linear-gradient(#333, white);

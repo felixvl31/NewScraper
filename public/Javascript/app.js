@@ -51,10 +51,10 @@ $(document).ready(function() {
       $("<h3>").append(
         `
         <div class="row align-items-center">
-          <div class= "col-9 col-md-11 text-center">
+          <div class= "col-9 col-md-10 text-center">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
           </div>
-          <div class= "col-3 col-md-1 text-center">
+          <div class= "col-3 col-md-2 text-center">
             <a class='align-bottom btn btn-success save'>Save</a>
           </div>
         </div>
@@ -94,40 +94,34 @@ $(document).ready(function() {
   }
 
   function renderEmpty() {
-    var emptyAlert = $(
-      [
-        "<div class='alert alert-warning text-center'>",
-        "<h4>No news at all, try scrapping some.</h4>",
-        "</div>",
-        "<div class='card'>",
-        "<div class='card-header text-center'>",
-        "<h3>What Would You Like To Do?</h3>",
-        "</div>",
-        "<div class='card-body text-center'>",
-        "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
-        "<h4><a href='/saved'>Go to Saved Articles</a></h4>",
-        "</div>",
-        "</div>"
-      ].join("")
-    );
+    var emptyAlert = `
+        <div class='alert alert-warning text-center'>
+         <h4>No news at all, try scrapping some.</h4>
+        </div>
+        <div class='card'>
+          <div class='card-header text-center'>
+            <h3>What Would You Like To Do?</h3>
+          </div>
+          <div class='card-body text-center'>
+            <h4><a class='scrape-new  empty'>Try Scraping New Articles</a></h4>
+            <h4><a class="GoToSaved" href='/saved'>Go to Saved Articles</a></h4>
+          </div>
+        </div>`;
     newsContainer.append(emptyAlert);
   }
   function renderEmptySaved() {
-    var emptyAlert = $(
-      [
-        "<div class='alert alert-warning text-center'>",
-        "<h4>No saved news.</h4>",
-        "</div>",
-        "<div class='card'>",
-        "<div class='card-header text-center'>",
-        "<h3>What Would You Like To Do?</h3>",
-        "</div>",
-        "<div class='card-body text-center'>",
-        "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
-        "</div>",
-        "</div>"
-      ].join("")
-    );
+    var emptyAlert = `
+        <div class='alert alert-warning text-center'>
+          <h4>No saved news.</h4>
+        </div>
+        <div class='card'>
+          <div class='card-header text-center'>
+            <h3>What Would You Like To Do?</h3>
+          </div>
+          <div class='card-body text-center'>
+            <h4><a class='scrape-new empty'>Try Scraping New Articles</a></h4>
+          </div>
+        </div>`;
     newsContainer.append(emptyAlert);
   }
 
