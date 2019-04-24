@@ -56,7 +56,10 @@ module.exports = function(app) {
   app.get("/api/delete", function(req, res) {
     db.News.deleteMany({})
       .then(function(dbNews) {
-        res.json(dbNews);
+        return db.Note.deleteMany({})
+      })
+      .then(function(dbNote) {
+        res.json(dbNote);
       })
       .catch(function(err) {
         res.json(err);
@@ -115,7 +118,10 @@ module.exports = function(app) {
   app.delete("/api/notedelete/:id", function(req, res) {
     db.Note.deleteOne({ _id: req.params.id })
       .then(function(dbNote) {
-        res.json(dbNote);
+        return db.News.findOneAndUpdate({ note: req.params.id },{ $pull:{note:req.params.id}},{ new: true });
+      })
+      .then(function(dbNews) {
+        res.json(dbNews);
       })
       .catch(function(err) {
         res.json(err);

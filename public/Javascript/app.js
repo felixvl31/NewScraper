@@ -221,7 +221,6 @@ $(document).ready(function() {
     var newNote = $(".textNote")
       .val()
       .trim();
-    console.log(newNote);
     if (newNote) {
       noteData = {
         body: newNote
@@ -231,7 +230,6 @@ $(document).ready(function() {
         url: "/api/news/" + thisId,
         data: noteData
       }).then(function(data) {
-        console.log(data);
         $(".textNote").val("");
         $('.modal').modal('hide');
       });
