@@ -104,6 +104,7 @@ $(document).ready(function() {
           </div>
           <div class='card-body text-center'>
             <h4><a class='scrape-new  empty'>Try scraping new articles</a></h4>
+             <h4><a class='scrape-new  empty' href='/saved'>Go to saved articles</a></h4>
           </div>
         </div>`;
     newsContainer.append(emptyAlert);
@@ -126,8 +127,8 @@ $(document).ready(function() {
 
   function handleScrape() {
     $.get("/scrape").then(function(data) {
-      newsContainer.empty();
       if (path === "/") {
+        newsContainer.empty();
         initPage();
       }
     });
