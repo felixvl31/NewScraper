@@ -87,7 +87,7 @@ nav{
 
 .card-header{
   background: linear-gradient(to bottom, #dbdbdb 0%,#b7b7b7 56%,#cecece 100%);
-  padding:0px 10px;
+  padding:10px 10px 5px;
 }
 .card-body{
   padding-top:3px !important;
@@ -158,34 +158,37 @@ button.close{
 }
 
 @media only screen and (max-width: 600px) {
-.jumbotron {
-  height: 150px;
-}
-.jumbotron .caption {
-  top: 10%;
-}
-.caption h1{
-  font-size:50px;
-}
-.caption p{
-  font-size:30px;
-}
-.article-link{
-  font-size:16px !important;
-}
-.author{
-  font-size:12px !important;
-}
-.imgcol{
-  padding:0px 0px 0px 10px;
-}
-.save,.notes,.unsave{
-  font-size:11px !important;
-}
-.unsave,.notes{
-  padding: 6px 6px;
-}
-.btncol{
-  padding:0px 10px 0px 0px !important;
-}
+  .jumbotron {
+    height: 150px;
+  }
+  .jumbotron .caption {
+    top: 10%;
+  }
+  .caption h1{
+    font-size:50px;
+  }
+  .caption p{
+    font-size:30px;
+  }
+  .article-link{
+    font-size:16px !important;
+  }
+  .author{
+    font-size:12px !important;
+  }
+  .imgcol{
+    padding:0px 0px 0px 10px;
+  }
+  .card-header{
+    padding: 0px 10px;
+  }
+  .save,.notes,.unsave{
+    font-size:11px !important;
+  }
+  .unsave,.notes{
+    padding: 6px 6px;
+  }
+  .btncol{
+    padding:0px 10px 0px 0px !important;
+  }
 }
