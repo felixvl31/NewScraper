@@ -127,7 +127,8 @@ $(document).ready(function() {
   function handleScrape() {
     $.get("/scrape").then(function(data) {
       newsContainer.empty();
-      window.location.pathname = "/";
+      setTimeout(function(){ 
+        window.location.pathname = "/"; }, 50);
     });
   }
   function handleClear() {
