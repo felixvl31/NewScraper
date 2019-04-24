@@ -3,6 +3,11 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 module.exports = function(app) {
+  function flatten(arr) {
+    return arr.reduce(function (flat, toFlatten) {
+      return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+    }, []);
+  }
   // A GET route for scraping the echoJS website
   app.get("/scrape", function(req, res) {
     // First, we grab the body of the html with axios
@@ -54,12 +59,20 @@ module.exports = function(app) {
 
   // Route for deleting all News
   app.get("/api/delete", function(req, res) {
-    db.News.deleteMany({})
+    db.News.find({saved:false})
       .then(function(dbNews) {
-        return db.Note.deleteMany({})
+        var Notes = [];
+        dbNews.forEach(function(New,i){
+          Notes.push(New.note);
+        });
+        var DeleteNotes = flatten(Notes);
+        return db.Note.deleteMany({_id: { $in:DeleteNotes}});
       })
-      .then(function(dbNote) {
-        res.json(dbNote);
+      .then(function(dbNotes){
+        return db.News.deleteMany({saved:false});
+      })
+      .then(function(dbNews){
+        res.json(dbNews);
       })
       .catch(function(err) {
         res.json(err);
