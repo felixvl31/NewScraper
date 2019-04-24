@@ -127,8 +127,9 @@ $(document).ready(function() {
   function handleScrape() {
     $.get("/scrape").then(function(data) {
       newsContainer.empty();
-      setTimeout(function(){ 
-        window.location.pathname = "/"; }, 50);
+      if (path === "/") {
+        initPage();
+      }
     });
   }
   function handleClear() {
@@ -181,13 +182,14 @@ $(document).ready(function() {
   }
 
  
-  function handleNotes() {
+  function handleNotes(ID) {
     $("#notes").empty();
     $("#saveButton").empty();
     var thisId = $(this).attr("data-id");
+    var useID = thisId ||ID;
     $.ajax({
       method: "GET",
-      url: "/api/news/" + thisId
+      url: "/api/news/" + useID
     })
       .then(function(data) {
         $(".modal-title").text(`Notes for... `+data.title);
@@ -202,7 +204,7 @@ $(document).ready(function() {
               </div>
 
               <div class="col-2">
-              <button class="btn btn-danger note-delete" data-id=${data.note[i]._id}>X</button>
+              <button class="btn btn-danger note-delete" data-id=${data.note[i]._id} data-article=${data._id}>X</button>
               </div>
             </div>
           </li>
@@ -211,13 +213,14 @@ $(document).ready(function() {
         }
         }
         $("#saveButton").append(
-          `<button class="btn btn-primary" data-id=${data._id} id='savenote'>Save Note</button>`
+          `<button class="btn btn-primary" data-id=${data._id} data-article=${data._id} id='savenote'>Save Note</button>`
         );
 
       });
   }
   function handleNoteSave() {
     var thisId = $(this).attr("data-id");
+    var articleID = $(this).attr("data-article");
     var noteData;
     var newNote = $(".textNote")
       .val()
@@ -232,17 +235,18 @@ $(document).ready(function() {
         data: noteData
       }).then(function(data) {
         $(".textNote").val("");
-        $('.modal').modal('hide');
+        handleNotes(articleID);
       });
     }
   }
   function handleNoteDelete() {
     var thisId = $(this).attr("data-id");
+    var articleID = $(this).attr("data-article");
     $.ajax({
       url: "/api/notedelete/" + thisId,
       method: "DELETE"
     }).then(function() {
-      $('.modal').modal('hide');
+      handleNotes(articleID);
     });
   }
 
