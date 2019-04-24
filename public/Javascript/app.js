@@ -54,12 +54,12 @@ $(document).ready(function() {
           <div class= "col-3 col-md-2 text-center imgcol">
             <img class="image" alt=${news.title} src=${news.image}>
           </div>
-          <div class= "col-6 col-md-8 text-center">
+          <div class= "col-7 col-md-8 text-center titlecol">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
             <br>
             <a class="author"> By ${news.author}</a>
           </div>
-          <div class= "col-3 col-md-2 text-center">
+          <div class= "col-2 col-md-2 text-center btncol">
             <a class='align-bottom btn btn-success save'>Save</a>
           </div>
         </div>
@@ -82,12 +82,12 @@ $(document).ready(function() {
             <div class= "col-3 col-md-2 text-center imgcol">
             <img class="image" alt=${news.title} src=${news.image}>
           </div>
-          <div class= "col-6 col-md-8 text-center">
+          <div class= "col-7 col-md-8 text-center titlecol">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
             <br>
             <a class="author"> By ${news.author}</a>
           </div>
-          <div class= "buttonsSaved col-3 col-md-2 text-center">
+          <div class= "buttonsSaved col-2 col-md-2 text-center btncol">
             <a class='btn btn-danger unsave'>Remove</a>
             <button type='button' class="btn btn-primary notes" data-toggle='modal' class='notes' data-target='.modal' data-id='${news._id}'>Notes</button>
           </div>

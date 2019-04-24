@@ -34,6 +34,7 @@ body {
 .home,.saved-news,.scrape-new,.clear{
   font-weight: 600;
   color:white !important;
+  cursor:pointer;
 }
 nav{
   border-bottom:5px solid white;
@@ -88,12 +89,19 @@ nav{
   border-radius:5px;
 }
 .imgcol{
-  padding:0px 0px 0px 10px;
+  padding:0px 0px 0px 10px !important;
+}
+.titlecol{
+  padding:0 !important;
+}
+.btncol{
+  padding:0px 10px 0px 0px !important;
 }
 .save,.notes,.unsave,#savenote,.closemodal{
   color:white !important; 
   font-weight:bolder; 
   margin-bottom: 5px;
+  cursor:pointer;
 }
 
 .buttonsSaved{
@@ -136,12 +144,21 @@ button.close{
   font-size:30px;
 }
 .article-link{
-  font-size:20px;
+  font-size:16px !important;
 }
 .author{
-  font-size:14px;
+  font-size:12px !important;
 }
 .imgcol{
   padding:0px 0px 0px 10px;
+}
+.save,.notes,.unsave{
+  font-size:11px !important;
+}
+.unsave,.notes{
+  padding: 6px 6px;
+}
+.btncol{
+  padding:0px 10px 0px 0px !important;
 }
 }
