@@ -51,8 +51,13 @@ $(document).ready(function() {
       $("<h3>").append(
         `
         <div class="row align-items-center">
-          <div class= "col-9 col-md-10 text-center">
+          <div class= "col-3 col-md-2 text-center imgcol">
+            <img class="image" alt=${news.title} src=${news.image}>
+          </div>
+          <div class= "col-6 col-md-8 text-center">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
+            <br>
+            <a class="author"> By ${news.author}</a>
           </div>
           <div class= "col-3 col-md-2 text-center">
             <a class='align-bottom btn btn-success save'>Save</a>
@@ -74,8 +79,13 @@ $(document).ready(function() {
       $("<h3>").append(
         `
         <div class="row align-items-center">
-          <div class= "col-9 col-md-10 text-center">
+            <div class= "col-3 col-md-2 text-center imgcol">
+            <img class="image" alt=${news.title} src=${news.image}>
+          </div>
+          <div class= "col-6 col-md-8 text-center">
             <a class='article-link' target='_blank' rel='noopener noreferrer' href=${"https://www.nytimes.com" + news.link}>${news.title}</a>
+            <br>
+            <a class="author"> By ${news.author}</a>
           </div>
           <div class= "buttonsSaved col-3 col-md-2 text-center">
             <a class='btn btn-danger unsave'>Remove</a>

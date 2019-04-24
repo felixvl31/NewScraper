@@ -77,7 +77,19 @@ nav{
 .article-link:hover,.article-link:active{
   color:white;
 }
+.author{
+  color:black;
+  font-weight: 700;
+  font-size:16px;
+}
 
+.image{
+  width:100%;
+  border-radius:5px;
+}
+.imgcol{
+  padding:0px 0px 0px 10px;
+}
 .save,.notes,.unsave,#savenote,.closemodal{
   color:white !important; 
   font-weight:bolder; 
@@ -122,5 +134,14 @@ button.close{
 }
 .caption p{
   font-size:30px;
+}
+.article-link{
+  font-size:20px;
+}
+.author{
+  font-size:14px;
+}
+.imgcol{
+  padding:0px 0px 0px 10px;
 }
 }
