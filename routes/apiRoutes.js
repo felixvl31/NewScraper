@@ -23,6 +23,7 @@ module.exports = function(app) {
           result.body = $(this).children("a").children("p").text();
           result.image = $(this).children("a").children("div").children("figure").children("div").children("img").attr("src");
           result.author = $(this).children("a").children("div").children("p").children("span").text();
+          
           db.News.findOne({ title: result.title })
             .then(function(dbResult) {
               if (dbResult === null) {
